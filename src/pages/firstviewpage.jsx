@@ -1,6 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
 import BMW from "../components/backgroundvideo/BMW VIDEO.webm";
+import Typewriter from "typewriter-effect";
+import Bgimage from '../assets/martin-katler--iNRphxCMJ4-unsplash.jpg'
+
+const textVariants = {
+  initial: {
+    y: 150,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 150,
+      damping: 50,
+    },
+  },
+};
 
 const FirstViewpage = () => {
   const svgVariants = {
@@ -25,7 +43,7 @@ const FirstViewpage = () => {
         <source src={BMW} type="video/webm" />
       </video>
 
-      <div className="absolute inset-0 flex-col bg-black opacity-70 flex justify-between items-center">
+      <div className="absolute inset-0 flex-col bg-black bg-opacity-70 flex justify-between items-center">
         <div className="h-24 w-full ">
           <div className="flex items-center  h-24 w-full">
             <div className="flex h-16 w-3/12  justify-evenly">
@@ -42,7 +60,7 @@ const FirstViewpage = () => {
           </div>
         </div>
         <div className="flex w-10/12 h-full  ">
-          <div className="flex justify-center items-center w-4/12 h-full bg-black ">
+          <div className="flex justify-center items-center w-4/12 h-full  ">
             <motion.svg
               initial={{ x: -100 }}
               animate={{ x: 0 }}
@@ -122,14 +140,23 @@ const FirstViewpage = () => {
             </motion.svg>
           </div>
 
-          <div className="flex flex-col justify-center  bg-black ">
-            <motion.h1 initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1, duration: 1 }} className="m-0   text-zinc-50 text-11xl font-extrabold  ">
+          <div className="flex flex-col justify-center    ">
+            <motion.h1 initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1, duration: 1 }} className="m-0 text-zinc-50 text-11xl font-extrabold  ">
               BMW
             </motion.h1>
-            <motion.h2 initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 2, duration: 1 }} className="text-4xl ml-2 font-extralight  text-white">
-              Experience an entirely new sensation of sheer
-              <br /> driving pleasure
-            </motion.h2>
+
+            <motion.div initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 2 }} variants={textVariants} className="text-4xl ml-2 font-extralight  text-white">
+              <Typewriter
+                options={{
+                  strings: ["Experience an entirely new sensation of sheer\n driving pleasure.", "Check out a variety of BMW finance offers available across the BMW range."],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </motion.div>
+            <div>
+              
+            </div>
           </div>
         </div>
       </div>
