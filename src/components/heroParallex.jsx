@@ -32,18 +32,18 @@ export const HeroParallax = ({ products }) => {
         className=""
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          {firstRow.map((product) => (
-            <ProductCard product={product} translate={translateX} key={product.title} />
+          {firstRow.map((product, index) => (
+            <ProductCard key={index} product={product} translate={translateX} />
           ))}
         </motion.div>
         <motion.div className="flex flex-row  mb-20 space-x-20 ">
-          {secondRow.map((product) => (
-            <ProductCard product={product} translate={translateXReverse} key={product.title} />
+          {secondRow.map((product, index) => (
+            <ProductCard key={index + 1} product={product} translate={translateXReverse} />
           ))}
         </motion.div>
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          {thirdRow.map((product) => (
-            <ProductCard product={product} translate={translateX} key={product.title} />
+          {thirdRow.map((product, index) => (
+            <ProductCard product={product} translate={translateX} key={index + 2} />
           ))}
         </motion.div>
       </motion.div>
@@ -55,10 +55,10 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        The Ultimate <br /> development studio
+        Thank you... <br /> <small>Now take a BMW ride!!!</small>
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks. We are a team of passionate developers and designers that love to build amazing products.
+        Our vehicles and products are tailored to the needs of our customers and constantly enhanced – with a clear focus on sustainability and the conservation of resources.{" "}
       </p>
     </div>
   );
