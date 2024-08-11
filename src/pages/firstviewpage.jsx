@@ -34,7 +34,7 @@ const FirstViewpage = () => {
   const showAndHideOne = useTransform(scrollYProgress, [0, 1], ["10%", "-500%"]);
 
   return (
-    <div className="h-screen w-full  relative">
+    <div className="h-screen w-full  relative overflow-hidden">
       <video className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop>
         <source src={BMW} type="video/webm" />
       </video>
@@ -59,9 +59,9 @@ const FirstViewpage = () => {
           <div className="flex justify-center items-center w-4/12 h-full  ">
             <motion.svg
               style={{ translateX: showAndHideOne }}
-              initial={{ x: -300 }}
+              initial={{ x: -1000 }}
               animate={{ x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 2}}
               variants={svgVariants}
               xmlns="http://www.w3.org/2000/svg"
               height="200"

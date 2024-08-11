@@ -1,8 +1,8 @@
 import React from "react";
 import { HeroParallax } from "../components/heroParallex";
-import i7 from '../assets/incgredientsImage/i7.webp'
-import i5 from '../assets/incgredientsImage/i5.jpeg'
-import threeseries from '../assets/incgredientsImage/3 series.webp'
+import i7 from '../assets/incgredientsImage/2021-bmw-m5-competition-579-edit-1625696490.jpg'
+import i5 from '../assets/incgredientsImage/intro-1679069049.jpg'
+import threeseries from '../assets/incgredientsImage/istockphoto-1435226078-612x612.jpg'
 import fourseries from '../assets/incgredientsImage/4 series.png'
 import sixseries from '../assets/incgredientsImage/6-Series-GT.jpg'
 import m3 from '../assets/incgredientsImage/m3.jpg'
@@ -21,12 +21,12 @@ export default function SecondViewPage() {
 
 export const products = [
   {
-    title: "Moonbeam",
+    title: "BMW i5",
     link: i7,
     thumbnail: i7,
   },
   {
-    title: "Cursor",
+    title: "BMW i5",
     link: i5,
     thumbnail: i5,
   },

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Bgimage from "../assets/martin-katler--iNRphxCMJ4-unsplash.jpg";
 import Bgimage2 from "../assets/bmnew.png";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
 const FifthViewPage = () => {
@@ -11,10 +11,9 @@ const FifthViewPage = () => {
     offset: ["start start", "end start"],
   });
 
-  const isInViewText = useInView(ref);
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "0%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "370%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "320%"]);
   return (
     <div ref={ref} className="h-screen w-full grid place-items-center relative">
       <motion.h1

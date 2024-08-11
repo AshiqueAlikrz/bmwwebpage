@@ -11,8 +11,8 @@ const HomePage = () => {
     <div>
       <FirstViewpage />
       <FourthViewPage />
-      <ThirdViewPage />
       <FifthViewPage />
+      <ThirdViewPage />
       <SixthViewPage />
       <SecondViewPage />
     </div>
