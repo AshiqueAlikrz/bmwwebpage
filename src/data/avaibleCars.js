@@ -57,7 +57,7 @@ export const allCars = [
   },
   {
     image: x3,
-    varient: "x3",
+    varient: "BMW X3",
     price: "43 lakh", 
   },
   {
