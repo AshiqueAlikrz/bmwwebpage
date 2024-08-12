@@ -34,19 +34,17 @@ const SixthViewPage = () => {
   const ref = useRef(null);
   const imageView = useInView(ref);
   return (
-    <div
-      className="w-full h-screen "
-    >
-      <motion.h1 variants={head} initial="hidden" animate={imageView && "visible"}  className="flex justify-center mt-2 font-extralight text-4xl">
-        Convenient Machines
+    <div className="w-full h-full ">
+      <motion.h1 variants={head} initial="hidden" animate={imageView && "visible"} className="flex justify-center  font-extralight text-4xl">
+        Convenient Machine
       </motion.h1>
-      <motion.div variants={container} initial="hidden" animate={imageView && "visible"} className="flex  justify-evenly  flex-wrap h-screen w-full   ">
+      <motion.div variants={container} initial="hidden" animate={imageView && "visible"} className="flex  gap-4  flex-wrap h-screen w-full m-0   ">
         {allCars.map((car, index) => (
           <motion.div key={index} ref={ref} variants={item} transition={{ duration: 0.5 }} className=" h-44 w-72">
             <div className="h-full w-full">
               <img src={car.image} className="object-fill h-full w-full " alt="reload" />
             </div>
-            <div className="w-full  h-12 flex-col items-center flex justify-center">
+            <div className="w-full  h-8 flex-col items-center flex justify-center">
               <h1 className="font-bold">{car.varient}</h1>
               <h2 className="font-thin">
                 <em>
